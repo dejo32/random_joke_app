@@ -14,6 +14,12 @@ import 'package:flutter/foundation.dart'
 ///   options: DefaultFirebaseOptions.currentPlatform,
 /// );
 /// ```
+/// 
+/// INSTRUCTIONS:
+/// 1. Copy this file to 'firebase_options.dart'
+/// 2. Replace all placeholder values with your actual Firebase configuration
+/// 3. Get your configuration from: https://console.firebase.google.com/
+/// 4. NEVER commit the real firebase_options.dart file to version control!
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
@@ -41,47 +47,46 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyBtOFKBQ_C1O_V_1hz-1eS5pSjleHefhrk',
-    appId: '1:526051922550:web:e4d706d29cfe6966900557',
-    messagingSenderId: '526051922550',
-    projectId: 'random-joke-app-65806',
-    authDomain: 'random-joke-app-65806.firebaseapp.com',
-    storageBucket: 'random-joke-app-65806.firebasestorage.app',
+    apiKey: 'YOUR_WEB_API_KEY_HERE',
+    appId: 'YOUR_WEB_APP_ID_HERE',
+    messagingSenderId: 'YOUR_SENDER_ID_HERE',
+    projectId: 'YOUR_PROJECT_ID_HERE',
+    authDomain: 'YOUR_PROJECT_ID_HERE.firebaseapp.com',
+    storageBucket: 'YOUR_PROJECT_ID_HERE.firebasestorage.app',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyA_SSlLbx5hVfZfigjcS4bh-PJcHApXkGw',
-    appId: '1:526051922550:android:c1634640aab5e694900557',
-    messagingSenderId: '526051922550',
-    projectId: 'random-joke-app-65806',
-    storageBucket: 'random-joke-app-65806.firebasestorage.app',
+    apiKey: 'YOUR_ANDROID_API_KEY_HERE',
+    appId: 'YOUR_ANDROID_APP_ID_HERE',
+    messagingSenderId: 'YOUR_SENDER_ID_HERE',
+    projectId: 'YOUR_PROJECT_ID_HERE',
+    storageBucket: 'YOUR_PROJECT_ID_HERE.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyD1ULHeBW0EHY7bxtEut8nG8WndBjpne6o',
-    appId: '1:526051922550:ios:54ac3b7e41f3f22a900557',
-    messagingSenderId: '526051922550',
-    projectId: 'random-joke-app-65806',
-    storageBucket: 'random-joke-app-65806.firebasestorage.app',
+    apiKey: 'YOUR_IOS_API_KEY_HERE',
+    appId: 'YOUR_IOS_APP_ID_HERE',
+    messagingSenderId: 'YOUR_SENDER_ID_HERE',
+    projectId: 'YOUR_PROJECT_ID_HERE',
+    storageBucket: 'YOUR_PROJECT_ID_HERE.firebasestorage.app',
     iosBundleId: 'com.example.randomJokeApp',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyD1ULHeBW0EHY7bxtEut8nG8WndBjpne6o',
-    appId: '1:526051922550:ios:54ac3b7e41f3f22a900557',
-    messagingSenderId: '526051922550',
-    projectId: 'random-joke-app-65806',
-    storageBucket: 'random-joke-app-65806.firebasestorage.app',
+    apiKey: 'YOUR_MACOS_API_KEY_HERE',
+    appId: 'YOUR_MACOS_APP_ID_HERE',
+    messagingSenderId: 'YOUR_SENDER_ID_HERE',
+    projectId: 'YOUR_PROJECT_ID_HERE',
+    storageBucket: 'YOUR_PROJECT_ID_HERE.firebasestorage.app',
     iosBundleId: 'com.example.randomJokeApp',
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyBtOFKBQ_C1O_V_1hz-1eS5pSjleHefhrk',
-    appId: '1:526051922550:web:64494c9bde9aabde900557',
-    messagingSenderId: '526051922550',
-    projectId: 'random-joke-app-65806',
-    authDomain: 'random-joke-app-65806.firebaseapp.com',
-    storageBucket: 'random-joke-app-65806.firebasestorage.app',
+    apiKey: 'YOUR_WINDOWS_API_KEY_HERE',
+    appId: 'YOUR_WINDOWS_APP_ID_HERE',
+    messagingSenderId: 'YOUR_SENDER_ID_HERE',
+    projectId: 'YOUR_PROJECT_ID_HERE',
+    authDomain: 'YOUR_PROJECT_ID_HERE.firebaseapp.com',
+    storageBucket: 'YOUR_PROJECT_ID_HERE.firebasestorage.app',
   );
-
-}
+} 

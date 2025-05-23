@@ -16,16 +16,10 @@ final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  if(kIsWeb){
-    await Firebase.initializeApp(options: FirebaseOptions(apiKey: "AIzaSyBtOFKBQ_C1O_V_1hz-1eS5pSjleHefhrk",
-        authDomain: "random-joke-app-65806.firebaseapp.com",
-        projectId: "random-joke-app-65806",
-        storageBucket: "random-joke-app-65806.firebasestorage.app",
-        messagingSenderId: "526051922550",
-        appId: "1:526051922550:web:78e7c3f54cc22495900557"));
-  }else{
-    await Firebase.initializeApp();
-  }
+  // Initialize Firebase with platform-specific options
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
 
   // Initialize notification service
   await NotificationService.initialize();
