@@ -16,6 +16,15 @@ class JokesListScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Jokes of Type: $type'),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.favorite, color: Colors.red),
+            onPressed: () {
+              Navigator.pushNamed(context, '/favorites');
+            },
+            tooltip: 'View Favorites',
+          ),
+        ],
       ),
       body: FutureBuilder<List<Joke>>(
         future: apiService.fetchJokesByType(type),
@@ -30,8 +39,8 @@ class JokesListScreen extends StatelessWidget {
               itemCount: jokes.length,
               itemBuilder: (context, index) {
                 return JokeCard(
-                  setup: jokes[index].setup,
-                  punchline: jokes[index].punchline,
+                  joke: jokes[index],
+                  showFavoriteButton: true,
                 );
               },
             );

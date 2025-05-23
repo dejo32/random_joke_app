@@ -3,6 +3,8 @@ import '../services/api_services.dart';
 import '../widgets/type_card.dart';
 import './jokes_list_screen.dart';
 import './random_joke_screen.dart';
+import './favorites_screen.dart';
+import './settings_screen.dart';
 import '../widgets/loading_indicator.dart';
 import '../widgets/error_message.dart';
 
@@ -16,6 +18,16 @@ class JokeTypesScreen extends StatelessWidget {
         title: Text('Joke Types'),
         actions: [
           IconButton(
+            icon: Icon(Icons.favorite, color: Colors.red),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => FavoritesScreen()),
+              );
+            },
+            tooltip: 'View Favorites',
+          ),
+          IconButton(
             icon: Icon(Icons.casino),
             onPressed: () {
               Navigator.push(
@@ -23,6 +35,17 @@ class JokeTypesScreen extends StatelessWidget {
                 MaterialPageRoute(builder: (context) => RandomJokeScreen()),
               );
             },
+            tooltip: 'Random Joke',
+          ),
+          IconButton(
+            icon: Icon(Icons.settings),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => SettingsScreen()),
+              );
+            },
+            tooltip: 'Settings',
           ),
         ],
       ),

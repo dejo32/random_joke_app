@@ -14,4 +14,13 @@ class Joke {
       punchline: json['punchline'],
     );
   }
+
+  Map<String, dynamic> toJson() {
+    return {
+      'id': id,
+      'type': type,
+      'setup': setup,
+      'punchline': punchline,
+    };
+  }
 }
